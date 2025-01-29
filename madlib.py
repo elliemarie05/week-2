@@ -2,6 +2,7 @@ import random
 
 def get_word(prompt):
     # TODO: Solicit a word from the user - be sure to strip it and turn it to lowercase 
+    word = input(prompt)
 
 def build_story(noun, verb, adjective, person, place):
     templates = [
@@ -27,15 +28,19 @@ def build_story(noun, verb, adjective, person, place):
         # Template 5: Make Your own 
         # GET CREATIVE!
     ]
-    return # TODO: WHAT CODE GOES HERE?
+    return random.choice(templates)
 
 def main():
     print("\n🌟📚 THE ULTIMATE SILLY STORY GENERATOR 2.0 📚🌟\n")
-    noun = # TODO: ADD CODE
+    noun = get_word("please give me a noun: ")
+    person= get_word("please give me a person: ")
+    verb= get_word("please give me a verb: ")
+    adjactive= get_word("please give me an adjective: ")
+    place= get_word("please give me a place: ")
     # now add for verb, adjective, person and place
   
     # Print out the Story
-    story = # TODO: Call the story function with al the right inputs (i.e. arguments!)
+    story = build_story(noun, verb, adjective, person, place):
   
     print("\n🔥📖 HERE IS YOUR STORY 📖🔥")
     print("=" * 45)
